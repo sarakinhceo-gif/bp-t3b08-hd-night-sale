@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-noir-gold">
+    <meta name="description" content="홍대 유흥 할인 정보 한눈에 보기. 가격, 위치, 분위기까지 bro들이 진짜 궁금해하는 모든 것. 전화 010-6279-0862로 지금 예약해.">
+    <meta name="keywords" content="홍대 유흥 할인 정보, 홍대 술집 정보, 홍대 클럽 정보, 홍대 유흥주점 위치, 홍대 가성비 술집 추천, 홍대 이색 술집 정보, 홍대 bro 모임 정보">
+    <link rel="canonical" href="https://t3b08-hd-night-sale.vercel.app/info">
+    <meta property="og:title" content="홍대 유흥 할인 정보 | bro들이 궁금한 모든 것">
+    <meta property="og:description" content="홍대 유흥 할인, 진짜 가성비 좋은 곳만 골랐어. 위치부터 가격까지 한눈에 확인하고 예약하자.">
+    <meta property="og:url" content="https://t3b08-hd-night-sale.vercel.app/info">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://t3b08-hd-night-sale.vercel.app/og-image.jpg">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:site_name" content="홍대 유흥 할인">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="홍대 유흥 할인 정보 | bro들이 궁금한 모든 것">
+    <meta name="twitter:description" content="홍대 유흥 할인, 진짜 가성비 좋은 곳만 골랐어. 위치부터 가격까지 한눈에 확인하고 예약하자.">
+    <title>홍대 유흥 할인 정보 | bro들이 궁금한 모든 것</title>
+    <style>
+        /* Reset & Base */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #0a0a0a; color: #f5f0e8; line-height: 1.7; }
+        /* Layout */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        section { padding: 80px 0; }
+        /* Typography */
+        h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.02em; }
+        h1 { font-size: 3.2rem; line-height: 1.1; margin-bottom: 24px; }
+        h2 { font-size: 2.4rem; line-height: 1.2; margin-bottom: 20px; }
+        h3 { font-size: 1.6rem; line-height: 1.3; margin-bottom: 16px; }
+        p { font-size: 1.1rem; margin-bottom: 16px; color: #c4bfb6; }
+        a { color: #d4a84b; text-decoration: none; transition: color 0.3s ease; }
+        a:hover { color: #e8c46a; }
+        .drop-cap::first-letter { font-size: 3.6rem; font-weight: 700; float: left; margin-right: 8px; color: #d4a84b; line-height: 1; }
+        /* Hero */
+        .hero { position: relative; min-height: 70vh; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, #0a0a0a 0%, #1a1410 50%, #0a0a0a 100%); z-index: 0; }
+        .hero h1 { position: relative; z-index: 1; color: #f5f0e8; text-shadow: 0 2px 20px rgba(212, 168, 75, 0.3); }
+        .hero p { position: relative; z-index: 1; font-size: 1.3rem; color: #c4bfb6; max-width: 600px; margin: 0 auto; }
+        /* Nav */
+        nav { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background: rgba(10, 10, 10, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(212, 168, 75, 0.1); padding: 16px 0; }
+        nav .container { display: flex; justify-content: space-between; align-items: center; }
+        nav .logo { font-size: 1.4rem; font-weight: 700; color: #d4a84b; }
+        nav ul { display: flex; gap: 32px; list-style: none; }
+        nav ul li a { color: #c4bfb6; font-size: 0.95rem; transition: color 0.3s ease; }
+        nav ul li a:hover { color: #d4a84b; }
+        .hamburger-menu { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; }
+        .hamburger-menu span { width: 28px; height: 2px; background: #d4a84b; transition: all 0.3s ease; }
+        @media (max-width: 768px) {
+            .hamburger-menu { display: flex; }
+            nav ul { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: rgba(10, 10, 10, 0.98); padding: 20px; gap: 16px; }
+            nav ul.active { display: flex; }
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.8rem; }
+            section { padding: 60px 0; }
+        }
+        .tel-link { display: inline-block; padding: 12px 28px; background: linear-gradient(135deg, #d4a84b, #e8c46a); color: #0a0a0a; border-radius: 30px; font-weight: 600; font-size: 1.1rem; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .tel-link:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(212, 168, 75, 0.4); color: #0a0a0a; }
+        /* Card */
+        .card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(212, 168, 75, 0.1); border-radius: 16px; padding: 32px; margin-bottom: 24px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(212, 168, 75, 0.1); }
+        .card h3 { color: #d4a84b; }
+        .card p { color: #a09a90; }
+        /* Grid */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+        @media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; } }
+        .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
+        @media (max-width: 768px) { .grid-3 { grid-template-columns: 1fr; } }
+        /* FAQ */
+        .faq-item { border-bottom: 1px solid rgba(212, 168, 75, 0.1); padding: 24px 0; }
+        .faq-item h4 { font-size: 1.2rem; color: #f5f0e8; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-item h4::after { content: '+'; font-size: 1.4rem; color: #d4a84b; }
+        .faq-item.active h4::after { content: '-'; }
+        .faq-item p { margin-top: 12px; display: none; color: #a09a90; }
+        .faq-item.active p { display: block; }
+        /* Footer */
+        footer { padding: 40px 0; border-top: 1px solid rgba(212, 168, 75, 0.1); text-align: center; }
+        footer p { font-size: 0.9rem; color: #66635a; }
+        /* CTA */
+        .cta-section { background: linear-gradient(135deg, rgba(212, 168, 75, 0.05), rgba(232, 196, 106, 0.05)); border-radius: 24px; padding: 60px; text-align: center; }
+        .cta-section h2 { color: #d4a84b; }
+        .cta-section p { max-width: 500px; margin: 0 auto 24px; }
+        /* Accent */
+        .accent-text { color: #d4a84b; }
+        .accent-border { border-left: 3px solid #d4a84b; padding-left: 20px; }
+        .badge { display: inline-block; padding: 4px 12px; background: rgba(212, 168, 75, 0.1); border: 1px solid rgba(212, 168, 75, 0.2); border-radius: 20px; font-size: 0.85rem; color: #d4a84b; }
+    </style>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">BRO NIGHT</div>
+            <ul id="nav-menu">
+                <li><a href="/">홈</a></li>
+                <li><a href="/info">정보</a></li>
+                <li><a href="/review">리뷰</a></li>
+                <li><a href="/faq">FAQ</a></li>
+                <li><a href="tel:010-6279-0862" class="tel-link">전화 예약</a></li>
+            </ul>
+            <div class="hamburger-menu" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1>홍대 유흥 할인<br>정보 한눈에</h1>
+            <p>가격, 위치, 분위기까지 — bro들이 진짜 궁금해하는 모든 것. 이거 하나면 너도 홍대 고인물.</p>
+            <a href="tel:010-6279-0862" class="tel-link" style="margin-top: 24px;">지금 예약하고 할인받기</a>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>왜 홍대 유흥 할인인가?</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>📍 위치가 진리</h3>
+                    <p>홍대입구역 3번 출구에서 도보 3분. 클럽, 주점, 유흥주점이 밀집한 골목길. 야간에도 완전 안전하고, bro들끼리 걸어서 이동하기 딱 좋아. 지하철 막차도 늦게까지 있어서 귀가도 편해.</p>
+                </div>
+                <div class="card">
+                    <h3>💰 가성비 최상</h3>
+                    <p>다른 지역 대비 20~30% 저렴해. 특히 우리 브로 할인 받으면 병당 5,000원 이상 싸게 먹을 수 있어. 4명이서 가면 병당 2,000원 꼴이니까 진짜 개이득. 대학가 물가 그대로 느낌.</p>
+                </div>
+                <div class="card">
+                    <h3>🎶 분위기 맛집</h3>
+                    <p>인디 음악부터 EDM, 힙합까지 장르별로 골라 들을 수 있어. 홍대는 뭐니뭐니해도 분위기지. 조명 하나, 음악 하나가 다르더라. bro들이랑 가면 진짜 찐 재미.</p>
+                </div>
+                <div class="card">
+                    <h3>🍻 이색 경험</h3>
+                    <p>일반 술집 말고 콘셉트 주점도 많아. 보드게임, 노래방, 다트까지 즐길 수 있는 곳이 한두 군데가 아님. 데이트로 와도 좋고, bro들이랑 와도 좋고. 홍대는 역시 다양성의 끝판왕.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>자주 묻는 질문</h2>
+            <div class="faq-item active">
+                <h4>할인은 어떻게 받나요?</h4>
+                <p>전화 예약 시 "브로 할인"이라고만 말하면 끝. 간단하지? 따로 쿠폰이나 코드 없이도 바로 적용돼. 예약하고 가면 입장료도 면제, 첫 병도 50% 할인. 이거 놓치면 진짜 손해.</p>
+            </div>
+            <div class="faq-item">
+                <h4>몇 명부터 할인되나요?</h4>
+                <p>2명부터 할인 적용 가능. 인원 많을수록 할인율이 올라가. 4명 이상이면 병당 2,000원 꼴로 먹을 수 있어. 단체로 오면 더 좋은 건 당연지사.</p>
+            </div>
+            <div class="faq-item">
+                <h4>예약 없이 가도 되나요?</h4>
+                <p>가능은 한데, 주말에는 자리 없을 확률 90%야. 특히 금요일, 토요일 밤은 예약 필수. 미리 전화해서 자리 확인하고 가는 게 멘탈에 좋아. 전화번호는 010-6279-0862.</p>
+            </div>
+            <div class="faq-item">
+                <h4>홍대에서 가장 핫한 곳은?</h4>
+                <p>요즘은 '더블드래곤'이랑 '뮌'이 제일 핫해. 두 곳 다 브로 할인 적용되니까 전화해서 물어보고 가. 분위기도 좋고, 사람들도 많아서 즐기기 딱 좋아. 단, 입장 전에 미리 연락해야 대기 없이 바로 입장 가능.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="cta-section">
+                <h2>지금 바로 예약하자</h2>
+                <p>전화 한 통이면 할인 적용 끝. bro들이 인정한 핫플에서 즐기는 홍대의 밤. 이 기회 놓치지 마.</p>
+                <a href="tel:010-6279-0862" class="tel-link">010-6279-0862</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 BRO NIGHT | 홍대 유흥 할인 | 전화: 010-6279-0862</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.getElementById('nav-menu').classList.toggle('active');
+        });
+
+        document.querySelectorAll('.faq-item h4').forEach(item => {
+            item.addEventListener('click', function() {
+                this.parentElement.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

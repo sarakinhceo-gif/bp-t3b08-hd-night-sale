@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="organic-stripe">
+    <meta name="bpaas-design-theme" content="kr-organic-stripe">
+    <title>홍대 유흥 할인 블로그 | 진짜 밤문화의 기준</title>
+    <meta name="description" content="홍대 유흥 할인, 단순한 가격 싸움인가? 우리는 시스템을 설계했다. 진짜 할인의 의미를 파헤친다. 010-6279-0862">
+    <meta name="keywords" content="홍대 유흥 할인, 홍대 밤문화 블로그, 홍대 클럽 할인, 홍대 술집 할인, 유흥 정보, 홍대 놀거리 추천">
+    <link rel="canonical" href="https://t3b08-hd-night-sale.vercel.app/blog">
+    <meta property="og:title" content="홍대 유흥 할인 | 블로그: 밤문화의 진실">
+    <meta property="og:description" content="홍대 유흥 할인을 단순한 가격 할인으로 보는가? 우리는 그 틀을 깬다. 진짜 시스템을 이해해야 돈이 보인다.">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #f5f3ee;
+            color: #1a1a1a;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #e0dcd5;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+        .site-logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+            color: #1a1a1a;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        .site-logo:hover {
+            opacity: 0.7;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+        nav a {
+            text-decoration: none;
+            color: #4a4a4a;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+            letter-spacing: 0.3px;
+        }
+        nav a:hover {
+            color: #000;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+        }
+        .hamburger span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background: #1a1a1a;
+            transition: 0.3s;
+        }
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 70px;
+            left: 0;
+            right: 0;
+            background: white;
+            border-bottom: 1px solid #e0dcd5;
+            padding: 1rem 1.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .mobile-menu.active {
+            display: block;
+        }
+        .mobile-menu ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .mobile-menu a {
+            text-decoration: none;
+            color: #1a1a1a;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .container {
+                padding: 0 1rem;
+            }
+        }
+
+        /* MAIN CONTENT */
+        .blog-hero {
+            padding: 4rem 0 2rem;
+            border-bottom: 1px solid #e0dcd5;
+        }
+        .blog-hero h1 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            letter-spacing: -1.5px;
+            line-height: 1.15;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+        .blog-hero .sub {
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 680px;
+            font-weight: 400;
+        }
+        .blog-meta {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: #777;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .blog-content {
+            padding: 3rem 0 4rem;
+            max-width: 800px;
+        }
+        .blog-content h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin: 2.5rem 0 1rem;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+        .blog-content p {
+            font-size: 1.05rem;
+            color: #2a2a2a;
+            margin-bottom: 1.4rem;
+        }
+        .blog-content strong {
+            font-weight: 700;
+            color: #000;
+        }
+        .blog-content .highlight-box {
+            background: #eae6df;
+            padding: 1.5rem 2rem;
+            border-left: 4px solid #1a1a1a;
+            margin: 2rem 0;
+            font-weight: 500;
+        }
+        .blog-content .highlight-box p {
+            margin-bottom: 0;
+        }
+        .blog-content ul {
+            margin: 1rem 0 1.5rem 1.5rem;
+        }
+        .blog-content li {
+            margin-bottom: 0.6rem;
+            font-size: 1.05rem;
+        }
+        .blog-content .cta-embed {
+            background: #1a1a1a;
+            color: white;
+            padding: 1.8rem 2rem;
+            margin: 2.5rem 0;
+            text-align: center;
+        }
+        .blog-content .cta-embed a {
+            color: white;
+            text-decoration: underline;
+            font-weight: 700;
+            font-size: 1.3rem;
+            letter-spacing: 0.5px;
+        }
+        .blog-content .cta-embed a:hover {
+            color: #ccc;
+        }
+        .blog-content .cta-embed .tel {
+            font-size: 1.8rem;
+            font-weight: 800;
+            display: block;
+            margin-top: 0.5rem;
+            letter-spacing: 1px;
+        }
+        .blog-footer-nav {
+            border-top: 1px solid #e0dcd5;
+            padding: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .blog-footer-nav a {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border-bottom: 1px solid transparent;
+            transition: border 0.2s;
+        }
+        .blog-footer-nav a:hover {
+            border-bottom: 1px solid #1a1a1a;
+        }
+        footer {
+            border-top: 1px solid #e0dcd5;
+            padding: 2rem 0;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #888;
+            letter-spacing: 0.3px;
+        }
+        @media (max-width: 768px) {
+            .blog-hero h1 {
+                font-size: 2rem;
+            }
+            .blog-content h2 {
+                font-size: 1.5rem;
+            }
+            .blog-content .cta-embed .tel {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="/" class="site-logo">NIGHTSALE</a>
+                <nav>
+                    <ul>
+                        <li><a href="/">홈</a></li>
+                        <li><a href="/about">소개</a></li>
+                        <li><a href="/blog">블로그</a></li>
+                        <li><a href="/contact">문의</a></li>
+                    </ul>
+                </nav>
+                <button class="hamburger" aria-label="메뉴 열기" onclick="document.querySelector('.mobile-menu').classList.toggle('active')">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <div class="mobile-menu">
+                <ul>
+                    <li><a href="/">홈</a></li>
+                    <li><a href="/about">소개</a></li>
+                    <li><a href="/blog">블로그</a></li>
+                    <li><a href="/contact">문의</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="blog-hero">
+                <h1>홍대 유흥 할인, 가격 싸움은 끝났다</h1>
+                <p class="sub">진짜 밤문화를 원한다면 시스템을 봐라. 할인율에 속지 말고 구조를 이해해야 네 지갑이 웃는다.</p>
+                <div class="blog-meta">
+                    <span>2025.02.14</span>
+                    <span>by 운영진</span>
+                    <span>조회 8,742</span>
+                </div>
+            </section>
+
+            <article class="blog-content">
+                <p><strong>홍대 유흥 할인.</strong> 검색하면 수백 개 업소가 나온다. 50% 할인, 1+1 이벤트, 첫 방문 무료. 근데 왜 실제로 가면 느낌이 다를까?</p>
+                <p>이유는 간단하다. 대부분의 할인은 <strong>가격만 깎고 서비스는 깎는다.</strong> 네가 원하는 건 싼 술이 아니라, 분위기와 퀄리티까지 포함된 경험이다. 우리는 그걸 시스템으로 만들었다.</p>
+
+                <h2>할인의 함정: 왜 싼 게 더 비쌀까?</h2>
+                <p>생각해봐라. 30% 할인해준다는 클럽. 입장은 싸지만, 안에서 테이블 비용, 병 서비스, 팁까지 합치면 오히려 더 나간다. 그 업소는 할인으로 끌어들이고, 내부 소비로 수익을 낸다. 네가 당하는 구조다.</p>
+                <p>반대로 우리 시스템은 <strong>투명한 가격 구조</strong>에 기반한다. 할인율이 20%면, 진짜 20% 빠진 금액만 내면 된다. 추가 숨은 비용은 없다. 왜? 우리는 장기 고객을 원하기 때문이다. 한 번 와서 속고 끝나는 관계는 필요 없다.</p>
+
+                <div class="highlight-box">
+                    <p>“홍대 유흥 할인은 숫자 게임이 아니다. 신뢰의 게임이다. 우리는 그 신뢰를 시스템에 심었다.”</p>
+                </div>
+
+                <h2>진짜 할인 시스템: 어떻게 작동하나?</h2>
+                <p>우리가 만든 프레임워크는 세 단계다.</p>
+                <ul>
+                    <li><strong>1. 사전 검증:</strong> 모든 제휴 업소는 실제 방문 평가를 통과한다. 분위기, 서비스, 가격 일관성을 확인한다.</li>
+                    <li><strong>2. 고정 할인율:</strong> 변동 이벤트 없음. 매일 동일한 조건. 네가 오늘 가든 내일 가든 같은 혜택을 받는다.</li>
+                    <li><strong>3. 사후 보장:</strong> 약속과 다른 서비스를 받으면 100% 환불. 우리가 직접 보상한다. 이게 시스템이다.</li>
+                </ul>
+                <p>이 구조는 단순하다. 하지만 대부분의 업소는 이걸 못 한다. 이유는? 그들은 단기 수익에 집착하기 때문이다. 우리는 다르다. 우리는 <strong>네가 다시 찾아오는 밤문화</strong>를 만든다.</p>
+
+                <h2>홍대에서 진짜를 찾는 법</h2>
+                <p>밤문화는 감정이다. 조명, 음악, 사람들 사이의 에너지. 할인은 그 경험을 방해하지 않아야 한다. 오히려 네가 더 자유롭게 즐길 수 있도록 도와야 한다.</p>
+                <p>우리가 제안하는 건 간단하다. <strong>가격에 속지 말고, 시스템을 믿어라.</strong> 그리고 직접 확인해봐라. 전화 한 통이면 모든 게 바뀐다.</p>
+
+                <div class="cta-embed">
+                    <p>지금 바로 시스템을 경험해라.</p>
+                    <a href="tel:010-6279-0862" class="tel">010-6279-0862</a>
+                    <p style="margin-top:0.8rem; font-size:0.9rem;">할인 조건, 제휴 업소 리스트, 실시간 확인 가능</p>
+                </div>
+
+                <p>홍대 유흥 할인, 더 이상 고민하지 마라. 싼 게 아니라 <strong>진짜</strong>를 선택해라. 우리가 만든 시스템은 네가 기대한 그 이상을 준다. 전화는 10초면 걸린다. 결정은 네 몫이다.</p>
+            </article>
+
+            <div class="blog-footer-nav">
+                <a href="/">← 홈으로</a>
+                <a href="/about">시스템 소개 →</a>
+                <a href="tel:010-6279-0862">전화 문의</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>홍대 유흥 할인 시스템 &mdash; 밤문화의 기준을 다시 세운다. 010-6279-0862</p>
+        </div>
+    </footer>
+
+    <script>
+        // 모바일 메뉴 외부 클릭 시 닫기
+        document.addEventListener('click', function(e) {
+            const menu = document.querySelector('.mobile-menu');
+            const hamburger = document.querySelector('.hamburger');
+            if (menu.classList.contains('active') && !menu.contains(e.target) && !hamburger.contains(e.target)) {
+                menu.classList.remove('active');
+            }
+        });
+        // 햄버거 버튼 토글
+        document.querySelector('.hamburger').addEventListener('click', function(e) {
+            e.stopPropagation();
+            document.querySelector('.mobile-menu').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
