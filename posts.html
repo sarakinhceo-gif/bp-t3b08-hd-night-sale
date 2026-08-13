@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (1/2) · t3b08-hd-night-sale</title>
+  <meta name="description" content="t3b08-hd-night-sale에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://hongdae-review-guide.program-school.online/posts.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ *, *::before, *::after {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+ html {
+ font-size: 16px;
+ scroll-behavior: smooth;
+ -webkit-font-smoothing: antialiased;
+ }
+ body {
+ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+ background: #f5f3ee;
+ color: #1a1a1a;
+ line-height: 1.6;
+ min-height: 100vh;
+ }
+ .container {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 1.5rem;
+ }
+ header {
+ background: #ffffff;
+ border-bottom: 1px solid #e0dcd5;
+ position: sticky;
+ top: 0;
+ z-index: 1000;
+ box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+ }
+ .nav-wrapper {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ height: 70px;
+ }
+ .site-logo {
+ font-size: 1.5rem;
+ font-weight: 800;
+ letter-spacing: -1px;
+ text-transform: uppercase;
+ color: #1a1a1a;
+ text-decoration: none;
+ transition: opacity 0.2s;
+ }
+ .site-logo:hover {
+ opacity: 0.7;
+ }
+ nav ul {
+ list-style: none;
+ display: flex;
+ gap: 2rem;
+ }
+ nav a {
+ text-decoration: none;
+ color: #4a4a4a;
+ font-weight: 500;
+ font-size: 0.95rem;
+ transition: color 0.2s;
+ letter-spacing: 0.3px;
+ }
+ nav a:hover {
+ color: #000;
+ }
+ .hamburger {
+ display: none;
+ flex-direction: column;
+ gap: 5px;
+ background: none;
+ border: none;
+ cursor: pointer;
+ padding: 5px;
+ }
+ .hamburger span {
+ display: block;
+ width: 26px;
+ height: 2px;
+ background: #1a1a1a;
+ transition: 0.3s;
+ }
+ .mobile-menu {
+ display: none;
+ position: absolute;
+ top: 70px;
+ left: 0;
+ right: 0;
+ background: white;
+ border-bottom: 1px solid #e0dcd5;
+ padding: 1rem 1.5rem;
+ box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+ }
+ .mobile-menu.active {
+ display: block;
+ }
+ .mobile-menu ul {
+ list-style: none;
+ display: flex;
+ flex-direction: column;
+ gap: 1rem;
+ }
+ .mobile-menu a {
+ text-decoration: none;
+ color: #1a1a1a;
+ font-weight: 600;
+ font-size: 1.1rem;
+ }
+ @media (max-width: 768px) {
+ nav ul {
+ display: none;
+ }
+ .hamburger {
+ display: flex;
+ }
+ .container {
+ padding: 0 1rem;
+ }
+ }
+
+ /* MAIN CONTENT */
+ .blog-hero {
+ padding: 4rem 0 2rem;
+ border-bottom: 1px solid #e0dcd5;
+ }
+ .blog-hero h1 {
+ font-size: 2.8rem;
+ font-weight: 900;
+ letter-spacing: -1.5px;
+ line-height: 1.15;
+ margin-bottom: 1rem;
+ text-transform: uppercase;
+ }
+ .blog-hero .sub {
+ font-size: 1.1rem;
+ color: #555;
+ max-width: 680px;
+ font-weight: 400;
+ }
+ .blog-meta {
+ display: flex;
+ gap: 1.5rem;
+ margin-top: 1.5rem;
+ font-size: 0.9rem;
+ color: #777;
+ text-transform: uppercase;
+ letter-spacing: 0.5px;
+ }
+ .blog-content {
+ padding: 3rem 0 4rem;
+ max-width: 800px;
+ }
+ .blog-content h2 {
+ font-size: 1.8rem;
+ font-weight: 800;
+ margin: 2.5rem 0 1rem;
+ letter-spacing: -0.5px;
+ line-height: 1.2;
+ }
+ .blog-content p {
+ font-size: 1.05rem;
+ color: #2a2a2a;
+ margin-bottom: 1.4rem;
+ }
+ .blog-content strong {
+ font-weight: 700;
+ color: #000;
+ }
+ .blog-content .highlight-box {
+ background: #eae6df;
+ padding: 1.5rem 2rem;
+ border-left: 4px solid #1a1a1a;
+ margin: 2rem 0;
+ font-weight: 500;
+ }
+ .blog-content .highlight-box p {
+ margin-bottom: 0;
+ }
+ .blog-content ul {
+ margin: 1rem 0 1.5rem 1.5rem;
+ }
+ .blog-content li {
+ margin-bottom: 0.6rem;
+ font-size: 1.05rem;
+ }
+ .blog-content .cta-embed {
+ background: #1a1a1a;
+ color: white;
+ padding: 1.8rem 2rem;
+ margin: 2.5rem 0;
+ text-align: center;
+ }
+ .blog-content .cta-embed a {
+ color: white;
+ text-decoration: underline;
+ font-weight: 700;
+ font-size: 1.3rem;
+ letter-spacing: 0.5px;
+ }
+ .blog-content .cta-embed a:hover {
+ color: #ccc;
+ }
+ .blog-content .cta-embed .tel {
+ font-size: 1.8rem;
+ font-weight: 800;
+ display: block;
+ margin-top: 0.5rem;
+ letter-spacing: 1px;
+ }
+ .blog-footer-nav {
+ border-top: 1px solid #e0dcd5;
+ padding: 2rem 0;
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+ gap: 1rem;
+ }
+ .blog-footer-nav a {
+ color: #1a1a1a;
+ text-decoration: none;
+ font-weight: 600;
+ font-size: 0.95rem;
+ border-bottom: 1px solid transparent;
+ transition: border 0.2s;
+ }
+ .blog-footer-nav a:hover {
+ border-bottom: 1px solid #1a1a1a;
+ }
+ footer {
+ border-top: 1px solid #e0dcd5;
+ padding: 2rem 0;
+ text-align: center;
+ font-size: 0.85rem;
+ color: #888;
+ letter-spacing: 0.3px;
+ }
+ @media (max-width: 768px) {
+ .blog-hero h1 {
+ font-size: 2rem;
+ }
+ .blog-content h2 {
+ font-size: 1.5rem;
+ }
+ .blog-content .cta-embed .tel {
+ font-size: 1.4rem;
+ }
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (1/2) · t3b08-hd-night-sale">
+  <meta property="og:description" content="t3b08-hd-night-sale에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://hongdae-review-guide.program-school.online/posts.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="container">
+ <div class="nav-wrapper">
+ <a href="/" class="site-logo">NIGHTSALE</a>
+ <nav>
+ <ul>
+ <li><a href="/">홈</a></li>
+ <li><a href="/about">소개</a></li>
+ <li><a href="/blog">블로그</a></li>
+ <li><a href="/contact">문의</a></li>
+ </ul>
+ </nav>
+ <button class="hamburger" aria-label="메뉴 열기" onclick="document.querySelector('.mobile-menu').classList.toggle('active')">
+ 
+ 
+ 
+ </button>
+ </div>
+ <div class="mobile-menu">
+ <ul>
+ <li><a href="/">홈</a></li>
+ <li><a href="/about">소개</a></li>
+ <li><a href="/blog">블로그</a></li>
+ <li><a href="/contact">문의</a></li>
+ </ul>
+ </div>
+ </div>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 40개 · 1/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/checklist-001-1dn775n.html">월 매출 3000 원 찍고도 6 개월 만에 죽은 건 유흥 할인 말고 이거였네</a>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-135.html">홍대 유흥을 알뜰하게 즐기는 맞춤형 할인 혜택 활용법</a>
+        <p class="post-item__summary">홍대에서 밤문화를 즐기고자 할 때 가장 고민되는 부분은 역시 비용입니다. 즐거운 시간을 보내기 위해 방문하는 수많은 업소들은 저마다 다른 가격 체계를 가지고 있으며, 정보가 부족한 상태에서 무작정 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-463.html">홍대 룸시스템 테이블 구조와 시간대별 단가의 비밀</a>
+        <p class="post-item__summary">무더위가 기승을 부리는 밤이면 사람들은 습관처럼 특정 동선을 찾는다. 뻔한 술집에서 평범한 밤을 보내는 것에 만족할 수 없다면, 결국 방 안에서 벌어지는 구조적인 차이를 이해해야 한다. 홍대 유흥의</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0033.html">홍대 유흥 할인 대신 떠나는 동대문 근육 피로 관리 가이드</a>
+        <p class="post-item__summary">오랜 시간 걷거나 서서 업무를 본 뒤에는 온몸이 뻐근해지기 마련입니다. 흔히 홍대 유흥 할인 혜택만을 찾아다니던 분들도 막상 몸이 지치면 적절한 휴식처를 찾지 못해 당황하곤 합니다. 건강한 일상을 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0034.html">홍대 유흥 할인 정보보다 중요한 마포 합정 소셜 라운지 팁</a>
+        <p class="post-item__summary">사람들은 흔히 소셜 라운지라고 하면 무조건 시끄럽고 복잡한 분위기를 떠올리곤 합니다. 하지만 홍대 유흥 할인 정보를 찾으며 무작정 인파 속으로 뛰어드는 것만이 정답은 아닙니다. 실제로 많은 이들이 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0035.html">홍대 유흥 할인 말고 검색할 콘텐츠 1급수 백링크 전략</a>
+        <p class="post-item__summary">최적화된 정보를 제공하기 위해서는 명확한 충족 조건이 선행되어야 합니다. 단순히 홍대 유흥 할인 같은 키워드에만 집착하는 시대는 지났으며, 이제는 콘텐츠 자체의 급수와 신뢰도가 중요합니다. 검색 엔</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0036.html">홍대 유흥 할인 탐색보다 현명한 4</a>
+        <p class="post-item__summary">여러분은 현재 본인의 마케팅 활동이 얼마나 자동화되어 있다고 생각하시나요? 홍대 유흥 할인 정보를 찾으며 시간을 낭비하는 대신, 비즈니스 효율을 극대화할 수 있는 새로운 기술을 습득하는 것이 미래를</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0037.html">홍대 유흥 할인 활용한 마포 럭셔리 단체 가라오케 예약 가이드</a>
+        <p class="post-item__summary">홍대 유흥 할인 혜택을 꼼꼼히 살피면 고품격 모임을 더욱 합리적으로 준비할 수 있습니다. 마포 지역의 대형 룸은 인원수에 따른 공간 배치가 중요하므로 사전에 면밀한 조사가 필요합니다. 이용하려는 시</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0038.html">홍대 유흥 할인 정보로 확인하는 지수 성장 클리닉</a>
+        <p class="post-item__summary">홍대 유흥 할인 프로모션을 분석하듯 웹사이트의 지표를 분석하는 작업은 매우 섬세한 접근을 요합니다. 웹 생태계에서 도메인 지수를 방어하고 키워드 가치를 보존하는 것은 장기적인 성장을 위한 필수 과정</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0039.html">홍대 유흥 할인 활용한 검색엔진 응급수술 절차</a>
+        <p class="post-item__summary">홍대 유흥 할인 정보를 찾을 때처럼 검색 결과의 변화를 민감하게 관찰하는 분들이 많습니다. 알고리즘 변경으로 인해 갑작스러운 순위 하락을 겪는다면 즉각적인 원인 분석이 필요합니다. 초기 대응이 늦어</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0040.html">홍대 유흥 할인 주변 마포 코인노래방 방음 시설 비교 가이드</a>
+        <p class="post-item__summary">홍대 유흥 할인 혜택을 찾아 이동하는 길목에 위치한 코인노래방을 방문할 때는 시설의 방음 상태를 우선적으로 확인해야 합니다. 단순히 노래를 부르는 공간을 넘어 소음을 차단하고 온전히 집중할 수 있는</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0041.html">홍대 유흥 할인 혜택으로 스마트하게 즐기는 셔츠룸 예약 가이드</a>
+        <p class="post-item__summary">갑작스러운 모임이나 야간 일정을 소화할 때 복잡한 예약 시스템 앞에서 당황하는 경우가 많습니다. 특히 홍대 인근에서 유흥을 즐기고자 할 때 정보를 미리 파악하지 않으면 예상보다 높은 비용을 지불해야</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0042.html">홍대 유흥 할인 적용 및 마포 셔츠룸 예약 시 눈탱이 피하는 법</a>
+        <p class="post-item__summary">많은 이들이 업체의 정보가 부족하면 무조건 비싼 비용을 지불해야 한다고 오해하곤 합니다. 하지만 시장의 구조를 조금만 이해한다면 홍대 유흥 할인 혜택을 적절히 활용해 훨씬 경제적인 이용이 가능합니다</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0043.html">홍대 유흥 할인 활용하는 마포 단체 회식용 대형 룸 노래방 가격 정보</a>
+        <p class="post-item__summary">단체 회식을 준비할 때는 장소의 규모, 서비스의 질, 이동의 편리성이라는 세 가지 조건이 반드시 충족되어야 합니다. 특히 많은 인원이 움직여야 하는 만큼 홍대 유흥 할인 혜택을 꼼꼼히 살피면 예산 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0044.html">홍대 유흥 할인 비교와 구글 틈새 키워드 트래픽 외환 거래 전략 분석</a>
+        <p class="post-item__summary">어떤 투자 전략이 가장 효율적인지, 혹은 어떤 정보를 신뢰해야 할지 고민해 본 적이 있으신가요? 이는 비단 금융 시장뿐만 아니라 홍대 유흥 할인 정보를 찾을 때도 마찬가지입니다. 정교한 분석을 통해</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0045.html">홍대 유흥 할인 혜택 확인하는 마포 유흥 투명 정찰제 가격 정보 디렉토리 운영 원칙</a>
+        <p class="post-item__summary">홍대 유흥 할인 키워드를 검색하면 수많은 정보가 쏟아지지만, 정작 중요한 비용의 투명성은 확인하기 어려운 경우가 많습니다. 소비자가 스스로 정보의 진위를 가려내기 위해서는 체계적인 접근법이 필요하며</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0046.html">홍대 유흥 할인 활용하는 마포 홍대 로컬 럭셔리 밤문화 가이드의 가격 판단 기준</a>
+        <p class="post-item__summary">홍대 유흥 할인 혜택을 찾는 과정에서 로컬의 정취가 살아있는 럭셔리한 경험을 원한다면, 가격 판단 기준을 확실히 세워야 합니다. 단순히 비용이 저렴한 곳을 찾는 것이 아니라, 제공되는 서비스의 질과</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0047.html">홍대 유흥 할인 적용 가능한 셔츠룸 사이트 예약 시 주의할 실패 지점 분석</a>
+        <p class="post-item__summary">홍대 유흥 할인 혜택을 받으려다 오히려 예약 과정에서 낭패를 보는 경우가 생각보다 많습니다. 가장 큰 실패 지점은 전화나 문자로만 정보를 확인하고 방문했다가, 정작 현장에서 시스템 차이나 예약 공백</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0048.html">홍대 유흥 할인 정보가 담긴 합정 셔츠룸 단골들이 뽑은 핫플 매거진 확인 항목</a>
+        <p class="post-item__summary">홍대 유흥 할인 혜택을 알뜰하게 활용하며 만족스러운 밤을 보내려면 합정 지역의 위치적 이점을 잘 살려야 합니다. 합정은 홍대와 인접하면서도 조금 더 차분한 분위기를 갖추고 있어 많은 단골들의 발길이</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0121.html">홍대 유흥 할인 혜택 확인과 구글 알고리즘 고신용 도메인 보증 카드 발급 절차</a>
+        <p class="post-item__summary">최근 온라인 서비스 결제 과정에서 신용도 문제로 인해 불편을 겪는 사례가 늘고 있습니다. 특히 특정 플랫폼에서 홍대 유흥 할인 혜택을 받으려다가 결제 수단이 거부되어 당황하는 사용자들이 적지 않습니</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <span class="pager__current">1</span>
+      <a class="pager__link" href="posts-2.html">2</a>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
